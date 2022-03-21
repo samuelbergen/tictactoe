@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
 
+    <link rel="icon" type="image/png" href="img/icons/favicon.png">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="script.js"></script>
 </head>
 
-<body>
-    
+<body onload="loadGame()">
+    <div>
+        <h1>TicTacToe</h1>
+    </div>
+    <div class="player-panel">
+        <div>
+            <img src="img/circle.png" id="player-1">Player 1
+        </div>
+        <div>
+            <img src="img/cross.png" class="player-inactive" id="player-2">Player 2
+        </div>
+    </div>
+    <div class="dialog-bg d-none" id="dialog-bg">
+        <div class="dialog">
+            <div class="game-over" id="game-over-text"></div>
+            <button class="restart-btn" id="restart-btn" onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <div class="table" id="table-container"></div>
 </body>
+
 </html>
